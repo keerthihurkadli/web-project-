@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paws & Hearts - Animal Charity</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 { margin: 0; font-size: 24px; }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover { color: #f39c12; }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1558788353-f76d92427f16') 
+                  no-repeat center center/cover;
+      height: 70vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 50px;
+      background: rgba(0,0,0,0.5);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    section {
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h2 { text-align: center; margin-bottom: 30px; color: #2c3e50; }
+    .programs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-5px); }
+    .donate {
+      text-align: center;
+      background: #fdf1d6;
+      padding: 40px;
+      border-radius: 15px;
+    }
+    .donate input, .donate button {
+      padding: 10px;
+      margin: 10px;
+      font-size: 16px;
+    }
+    .donate button {
+      background: #e67e22;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .donate button:hover { background: #d35400; }
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+    footer a { color: #f39c12; margin: 0 10px; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Paws & Hearts</h1>
+    <nav>
+      <a href="#mission">Mission</a>
+      <a href="#programs">Programs</a>
+      <a href="#donate">Donate</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h2>Saving Lives, One Paw at a Time 🐾</h2>
+  </div>
+
+  <!-- Mission Section -->
+  <section id="mission">
+    <h2>Our Mission</h2>
+    <p>
+      At <b>Paws & Hearts</b>, we are dedicated to rescuing, rehabilitating, 
+      and rehoming animals in need. Our mission is to spread love, 
+      create awareness, and give every animal a safe and happy home.
+    </p>
+  </section>
+
+  <!-- Programs Section -->
+  <section id="programs">
+    <h2>Our Programs</h2>
+    <div class="programs">
+      <div class="card">
+        <h3>🐶 Rescue</h3>
+        <p>We rescue abandoned and injured animals, providing them immediate care.</p>
+      </div>
+      <div class="card">
+        <h3>🐱 Adoption</h3>
+        <p>We connect rescued animals with loving families through adoption drives.</p>
+      </div>
+      <div class="card">
+        <h3>🏥 Healthcare</h3>
+        <p>Our medical team ensures proper vaccination, sterilization, and treatment.</p>
+      </div>
+      <div class="card">
+        <h3>📢 Awareness</h3>
+        <p>We educate communities about animal rights and welfare initiatives.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Donation Section -->
+  <section id="donate" class="donate">
+    <h2>Support Our Cause</h2>
+    <p>Your donation helps save countless lives. Every contribution matters!</p>
+    <input type="number" id="amount" placeholder="Enter amount (₹)" min="50">
+    <button onclick="donateNow()">Donate Now</button>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>📍 Bangalore, India | 📞 +91 98765 43210 | ✉️ info@pawshearts.org</p>
+    <p>
+      <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+    </p>
+    <p>&copy; 2025 Paws & Hearts. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function donateNow() {
+      let amount = document.getElementById("amount").value;
+      if(amount && amount >= 50) {
+        alert("Thank you for donating ₹" + amount + "! 🐾");
+        document.getElementById("amount").value = "";
+      } else {
+        alert("Please enter a valid amount (minimum ₹50).");
+      }
+    }
+  </script>
+</body>
+</html>
