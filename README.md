@@ -1,2 +1,2 @@
 # web-project-
-Developed a responsive Personal Portfolio Website using HTML, CSS, and JavaScript featuring About Me, Skills, Experience, and Contact sections to showcase professional profile and enable easy communication.
+Created an interactive animal charity website using HTML5, CSS, and JavaScript to present the mission, detail rescue and adoption programs, raise awareness about animal welfare, and provide a simple donation system for supporters to contribute.
